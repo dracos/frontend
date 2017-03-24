@@ -52,11 +52,7 @@ class GuideControllerTest < ActionController::TestCase
 
     context "A/B testing" do
       setup do
-        @content_item = content_store_has_example_item(
-          '/tagged-to-taxon',
-          schema: 'guide',
-          is_tagged_to_taxon: true
-        )
+        content_store_has_example_item('/tagged-to-taxon', schema: 'guide', is_tagged_to_taxon: true)
       end
 
       %w[A B].each do |variant|
